@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+        }
+
+        .navbar{
+            width:100%;
+            background:#007bff;
+            padding:15px;
+            color:white;
+            font-size:22px;
+            text-align:center;
+        }
+
+        .container{
+            width:90%;
+            margin:30px auto;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+            margin-bottom:20px;
+        }
+
+        .card h2{
+            margin-bottom:15px;
+            color:#333;
+        }
+
+        .input-box{
+            margin-bottom:15px;
+        }
+
+        .input-box input,
+        .input-box textarea,
+        .input-box select{
+            width:100%;
+            padding:10px;
+            border:1px solid #ccc;
+            border-radius:5px;
+            outline:none;
+        }
+
+        .btn{
+            background:#007bff;
+            color:white;
+            padding:10px 20px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .btn:hover{
+            background:#0056b3;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+        }
+
+        table th,
+        table td{
+            border:1px solid #ddd;
+            padding:12px;
+            text-align:left;
+        }
+
+        table th{
+            background:#007bff;
+            color:white;
+        }
+
+        .status{
+            padding:5px 10px;
+            border-radius:5px;
+            color:white;
+            font-size:14px;
+        }
+
+        .pending{
+            background:orange;
+        }
+
+        .completed{
+            background:green;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        Mini SaaS Dashboard
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Add New Project</h2>
+
+            <form action="addProject" method="POST">
+
+                <div class="input-box">
+                    <input type="text" name="title" placeholder="Project Title" required>
+                </div>
+
+                <div class="input-box">
+                    <textarea name="description" rows="4" placeholder="Project Description"></textarea>
+                </div>
+
+                <div class="input-box">
+                    <select name="status">
+                        <option>Pending</option>
+                        <option>Completed</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Save Project</button>
+
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Project List</h2>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Website Design</td>
+                    <td>Create company website</td>
+                    <td>
+                        <span class="status pending">Pending</span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Mobile App</td>
+                    <td>Android Application</td>
+                    <td>
+                        <span class="status completed">Completed</span>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>
