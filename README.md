@@ -248,7 +248,7 @@ By building this project you will understand:
 
 # 👨‍💻 Developer
 
-## Wajahat Hassan
+## Shujaat Ali
 
 Passionate Full Stack Developer focused on:
 
@@ -281,6 +281,6 @@ This project is licensed under the **MIT License**.
 
 ### 🚀 Built with Node.js + Express + SQLite
 
-Made with ❤️ by Wajahat Hassan
+Made with ❤️ by Shujaat Ali
 
 </div>
